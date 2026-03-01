@@ -194,6 +194,28 @@
     </p>
 </div>
 
+    <div class="instructions" style="margin-top: 30px;">
+    <h2>¿Cómo garantizamos que cada persona vote una sola vez?</h2>
+
+    <p>
+        El sistema está diseñado para asegurar que cada participante tenga un único voto válido.
+        Para lograrlo, utilizamos un identificador interno asociado a cada participante.
+    </p>
+
+    <p>
+        Cuando una persona envía un mensaje, el sistema verifica automáticamente si ya existe
+        un registro previo asociado a ese identificador. En caso de existir, el nuevo voto
+        reemplaza el anterior, manteniendo siempre un único voto válido por participante.
+    </p>
+
+    <p>
+        Esto significa que:
+        <br><strong>• No es posible acumular múltiples votos desde el mismo participante.</strong>
+        <br><strong>• Siempre se conserva únicamente el último voto válido enviado.</strong>
+        <br><strong>• El sistema evita duplicidades de manera automática.</strong>
+    </p>
+</div>
+
 <footer>
     © 2026 - Visualización con Power BI
 </footer>
