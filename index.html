@@ -52,6 +52,45 @@
             border: none;
         }
 
+        .instructions {
+            width: 95%;
+            max-width: 900px;
+            background: white;
+            margin-top: 40px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .instructions h2 {
+            margin-top: 0;
+            color: #1f2937;
+        }
+
+        .instructions p {
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .vote-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background-color: #25D366;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s ease;
+        }
+
+        .vote-button:hover {
+            background-color: #1ebe5d;
+            transform: scale(1.05);
+        }
+
         footer {
             margin: 40px 0;
             color: #666;
@@ -74,8 +113,85 @@
 
 <div class="wrapper">
     <div class="powerbi-container">
-        <iframe title="Sondeo Presidencial Colombia 2026" width="373.5" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiNWZmNGU2N2MtZWQ4MS00MjE5LWJmYjEtMmU2ZTgyNGQzODM2IiwidCI6ImIxYzlhMWQxLWVkYzAtNGQ0My1iYjg1LWJhODJjOWU1YjQ5MyIsImMiOjR9" frameborder="0" allowFullScreen="true"></iframe>
+        <iframe title="Sondeo Presidencial Colombia 2026"
+            src="https://app.powerbi.com/view?r=eyJrIjoiNWZmNGU2N2MtZWQ4MS00MjE5LWJmYjEtMmU2ZTgyNGQzODM2IiwidCI6ImIxYzlhMWQxLWVkYzAtNGQ0My1iYjg1LWJhODJjOWU1YjQ5MyIsImMiOjR9"
+            allowFullScreen="true">
+        </iframe>
     </div>
+</div>
+
+<div class="instructions">
+    <h2>¿Cómo funciona el sistema de votación?</h2>
+    <p>
+        Para participar en el sondeo, solo debes enviar un mensaje por WhatsApp al número oficial del sistema.
+        Nuestro sistema lee automáticamente tu último mensaje y detecta palabras clave asociadas a cada candidato presidencial.
+    </p>
+    <p>
+        Solo necesitas enviar el nombre o apellido del candidato para que tu voto sea registrado.
+    </p>
+
+    <!-- REEMPLAZA EL NUMERO AQUI -->
+    <a class="vote-button" href="https://wa.me/573332782483?text=Mi%20presidente%20es:%20" target="_blank">
+        🗳 Votar ahora por WhatsApp
+    </a>
+    <p>
+        Por ejemplo:
+        <br><strong>• Si escribes "Iván"</strong>, tu voto contará para Iván Cepeda.
+        <br><strong>• Si escribes "Esprilla"</strong>, tu voto contará para Abelardo de la Espriella.
+        <br>
+        Y así sucesivamente con cada candidato. Adempas cubrimos casos de errores, porsu 
+    </p>
+    <p>
+    Además, el sistema también contempla posibles errores comunes al escribir los nombres.
+    Sabemos que algunas personas pueden cometer errores ortográficos, escribir solo una parte
+    del nombre o incluir pequeñas variaciones al momento de votar.
+</p>
+
+<p>
+    Nuestro sistema identifica estas variaciones y analiza el mensaje de forma inteligente
+    para determinar con precisión la intención del votante. Es decir, incluso si el nombre
+    contiene un error leve o está incompleto, el voto será asignado correctamente al
+    candidato correspondiente.
+</p>
+
+<p>
+    De esta manera garantizamos que tu participación sea válida, incluso si hay pequeños
+    errores al escribir.
+</p>
+
+</div>
+
+    <div class="instructions" style="margin-top: 30px;">
+    <h2>Seguridad y Protección de Datos</h2>
+
+    <p>
+        Este sondeo ha sido diseñado priorizando la privacidad y la seguridad de los participantes.
+        El sistema <strong>no publica ni almacena números de teléfono en la visualización de Power BI</strong>.
+    </p>
+
+    <p>
+        La base de datos visible únicamente contiene un identificador interno (ID anónimo)
+        generado automáticamente en el momento en que se recibe el mensaje. Este ID
+        no permite identificar al votante ni acceder a su número celular.
+    </p>
+
+    <p>
+        En el improbable caso de un acceso no autorizado a la visualización pública,
+        la única información visible serían registros anónimos sin datos personales.
+        No se comparten números de teléfono, nombres ni información privada.
+    </p>
+
+    <p>
+        Este proyecto es una iniciativa independiente y sin afiliación política.
+        Nuestro único objetivo es realizar un sondeo ciudadano y demostrar cómo la
+        tecnología puede utilizarse para modernizar y hacer más eficientes los procesos
+        participativos en el país.
+    </p>
+
+    <p>
+        Creemos en el uso responsable de la tecnología como herramienta para fortalecer
+        la transparencia, la participación y el desarrollo institucional.
+    </p>
 </div>
 
 <footer>
