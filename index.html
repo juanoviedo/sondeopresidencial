@@ -484,5 +484,59 @@
     © 2026 - Visualización con Power BI
 </footer>
 
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>const url = "https://powerproccesses-my.sharepoint.com/personal/joviedo_pprocesses_onmicrosoft_com/_layouts/15/download.aspx?SourceUrl=%2Fpersonal%2Fjoviedo%5Fpprocesses%5Fonmicrosoft%5Fcom%2FDocuments%2FPublic%2Fresultados%2Ejson";
+
+fetch(url)
+.then(response => response.json())
+.then(data => {
+
+    const resultados = data.body;
+
+    const totals = {};
+
+    // sumar votos por candidato
+    resultados.forEach(r => {
+        const candidato = r.Candidato;
+        const votos = Number(r.Votos);
+
+        if(!totals[candidato]){
+            totals[candidato] = 0;
+        }
+
+        totals[candidato] += votos;
+    });
+
+    const labels = Object.keys(totals);
+    const votos = Object.values(totals);
+
+    const ctx = document.getElementById("graficaResultados");
+
+    new Chart(ctx, {
+        type: "bar",
+        data: {
+            labels: labels,
+            datasets: [{
+                label: "Votos",
+                data: votos,
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+})
+.catch(error => {
+    console.error("Error cargando resultados:", error);
+});</script>
+
 </body>
 </html>
